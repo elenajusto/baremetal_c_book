@@ -1,0 +1,18 @@
+#include "gpio.h"
+#include "systick.h"
+#include "tim.h"
+
+bool btn_state;
+
+int main(void) {
+	/*Initialize LED*/
+	led_init();
+
+	while(1) {
+		/*Delay for 500ms*/
+		systick_msec_delay(250);
+
+		/* Toggle the LED */
+		led_toggle();
+	}
+}

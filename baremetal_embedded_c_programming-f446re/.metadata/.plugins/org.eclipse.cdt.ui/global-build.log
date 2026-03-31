@@ -1,0 +1,44 @@
+18:31:06 **** Incremental Build of configuration Debug for project i2c ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -DSTM32F446xx -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/workspace_1.18.1/i2c/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/workspace_1.18.1/i2c/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/i2c.o"
+../Src/i2c.c: In function 'i2c1_dummy_start':
+../Src/i2c.c:83:23: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   83 |     volatile uint32_t temp;
+      |                       ^~~~
+../Src/i2c.c: In function 'i2c1_byte_read':
+../Src/i2c.c:109:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  109 |         volatile int tmp;
+      |                      ^~~
+../Src/i2c.c: In function 'i2c1_burst_read':
+../Src/i2c.c:164:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  164 |         volatile int tmp;
+      |                      ^~~
+../Src/i2c.c: In function 'i2c1_burst_write':
+../Src/i2c.c:240:22: warning: variable 'tmp' set but not used [-Wunused-but-set-variable]
+  240 |         volatile int tmp;
+      |                      ^~~
+arm-none-eabi-gcc -o "i2c.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\STM32CubeIDE\workspace_1.18.1\i2c\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="i2c.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: i2c.elf
+ 
+arm-none-eabi-size  i2c.elf 
+arm-none-eabi-objdump -h -S i2c.elf  > "i2c.list"
+   text	   data	    bss	    dec	    hex	filename
+   1540	      0	   1568	   3108	    c24	i2c.elf
+Finished building: default.size.stdout
+ 
+Finished building: i2c.list
+ 
+18:31:11 **** Incremental Build of configuration Debug for project i2c ****
+make -j12 all 
+arm-none-eabi-size  i2c.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1540	      0	   1568	   3108	    c24	i2c.elf
+Finished building: default.size.stdout
+ 
+18:34:32 **** Incremental Build of configuration Debug for project i2c ****
+make -j12 all 
+arm-none-eabi-size  i2c.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1540	      0	   1568	   3108	    c24	i2c.elf
+Finished building: default.size.stdout
+ 

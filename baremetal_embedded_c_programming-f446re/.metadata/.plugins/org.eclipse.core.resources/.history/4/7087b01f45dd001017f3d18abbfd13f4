@@ -1,0 +1,18 @@
+#include "gpio.h"
+#include "tim.h"
+
+int main(void) {
+	/*Initialize LED*/
+	led_init();
+
+	/*Initialize timer*/
+	tim2_1hz_init();
+
+	while(1) {
+		/* Toggle the LED */
+
+		led_toggle();
+		/* Toggle the LED */
+		led_toggle();
+	}
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include "uart.h"
+#include "mpu6050.h"
+
+int main(void) {
+	/*Initialize debug UART*/
+	uart_init();
+
+	/*Initialize debug UART*/
+	sensor_init();
+
+	while(1) {
+		i2c1_dummy_start();
+		for (volatile int i = 0; i < 1000000; i++); // delay
+	}
+
+
+}

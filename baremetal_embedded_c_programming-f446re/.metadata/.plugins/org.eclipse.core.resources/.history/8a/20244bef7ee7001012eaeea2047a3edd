@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include "uart.h"
+
+int main(void) {
+	/*Initialize debug UART*/
+	uart_init();
+}
