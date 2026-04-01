@@ -1,0 +1,10 @@
+17:22:35 **** Incremental Build of configuration Debug for project ch2_constructing_peripheral_register_from_memory_addresses ****
+make -j16 all 
+arm-none-eabi-size  ch2_constructing_peripheral_register_from_memory_addresses.elf 
+   text	   data	    bss	    dec	    hex	filename
+    456	      0	   1568	   2024	    7e8	ch2_constructing_peripheral_register_from_memory_addresses.elf
+Finished building: default.size.stdout
+ 
+
+17:22:35 Build Finished. 0 errors, 0 warnings. (took 195ms)
+
