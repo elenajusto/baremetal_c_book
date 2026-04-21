@@ -1,0 +1,43 @@
+// Microcontroller: STM32G071R
+
+// Base address for peripherals
+#define PERIPH_BASE		(0x40000000UL)
+
+// Offset for AHB bus
+#define AHB_OFFSET		(0x20000)
+
+// Base address for AHB bus
+#define AHB_BASE 		(PERIPH_BASE + AHB_OFFSET)
+
+// Base address for IOPORT peripherals
+#define IOPORT_BASE		(0x50000000UL)
+
+// Offset for GPIOA
+#define GPIOA_OFFSET	(0x0000UL)
+
+// Base address for GPIOA
+#define GPIOA_BASE		(IOPORT_BASE + GPIOA_OFFSET)
+
+// Offset for RCC
+#define RCC_OFFSET		(0x1000)
+
+// Base address for RCC
+#define RCC_BASE		(AHB_BASE + RCC_OFFSET)
+
+// Offset to RCC_IOPENR register
+#define RCC_IOPENR_OFFSET 		(0x34)
+
+// Address to RCC_IOPENR register
+#define RCC_IOPENR_ADDR	(*(volatile unsigned int *) (RCC_BASE + RCC_IOPENR_OFFSET)
+
+// Offset for GPIOA mode register
+#define GPIOA_MODER		(0x00UL)
+
+// Address for GPIOA mode register
+
+
+// Offset for GPIOA output data register
+
+
+// Address for GPIOA output data register
+
