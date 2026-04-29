@@ -1,10 +1,10 @@
-12:16:08 **** Incremental Build of configuration Debug for project Ch2-RegisterManipulation ****
+16:21:52 **** Incremental Build of configuration Debug for project Ch2-RegisterManipulation ****
 make -j12 all 
 arm-none-eabi-size  Ch2-RegisterManipulation.elf 
    text	   data	    bss	    dec	    hex	filename
-    524	      0	   1568	   2092	    82c	Ch2-RegisterManipulation.elf
+    552	      0	   1568	   2120	    848	Ch2-RegisterManipulation.elf
 Finished building: default.size.stdout
  
 
-12:16:09 Build Finished. 0 errors, 0 warnings. (took 142ms)
+16:21:52 Build Finished. 0 errors, 0 warnings. (took 138ms)
 

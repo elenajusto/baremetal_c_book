@@ -66,8 +66,11 @@ int main(void) {
 	// Main loop
 	while(1) {
 
-		// Set PA5 to high
-		GPIOA_ODR_ADDR |= LED_PIN;
+		// Toggle PA5
+		GPIOA_ODR_ADDR ^= LED_PIN;
+
+		// Delay
+		for (int i = 0; i < 100000; i++){}
 	}
 }
 

@@ -1,21 +1,24 @@
-12:16:02 **** Incremental Build of configuration Debug for project Ch2-RegisterManipulation ****
+16:21:45 **** Build of configuration Debug for project Ch2-RegisterManipulation ****
 make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32g071rbtx.d" -MT"Startup/startup_stm32g071rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32g071rbtx.o" "../Startup/startup_stm32g071rbtx.s"
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
 arm-none-eabi-gcc -o "Ch2-RegisterManipulation.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\Ch2-RegisterManipulation\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Ch2-RegisterManipulation.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Ch2-RegisterManipulation.elf
  
 arm-none-eabi-size  Ch2-RegisterManipulation.elf 
 arm-none-eabi-objdump -h -S Ch2-RegisterManipulation.elf  > "Ch2-RegisterManipulation.list"
    text	   data	    bss	    dec	    hex	filename
-    524	      0	   1568	   2092	    82c	Ch2-RegisterManipulation.elf
+    552	      0	   1568	   2120	    848	Ch2-RegisterManipulation.elf
 Finished building: default.size.stdout
  
 Finished building: Ch2-RegisterManipulation.list
  
-12:16:08 **** Incremental Build of configuration Debug for project Ch2-RegisterManipulation ****
+16:21:52 **** Incremental Build of configuration Debug for project Ch2-RegisterManipulation ****
 make -j12 all 
 arm-none-eabi-size  Ch2-RegisterManipulation.elf 
    text	   data	    bss	    dec	    hex	filename
-    524	      0	   1568	   2092	    82c	Ch2-RegisterManipulation.elf
+    552	      0	   1568	   2120	    848	Ch2-RegisterManipulation.elf
 Finished building: default.size.stdout
  

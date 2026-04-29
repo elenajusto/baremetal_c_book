@@ -1,0 +1,78 @@
+// Microcontroller: STM32G071R
+
+// Base address for peripherals
+#define PERIPH_BASE			(0x40000000UL)
+
+// Offset for AHB bus
+#define AHB_OFFSET			(0x20000)
+
+// Base address for AHB bus
+#define AHB_BASE 			(PERIPH_BASE + AHB_OFFSET)
+
+// Base address for IOPORT peripherals
+#define IOPORT_BASE			(0x50000000UL)
+
+// Offset for GPIOA
+#define GPIOA_OFFSET		(0x0000UL)
+
+// Base address for GPIOA
+#define GPIOA_BASE			(IOPORT_BASE + GPIOA_OFFSET)
+
+// Offset for RCC
+#define RCC_OFFSET			(0x1000UL)
+
+// Base address for RCC
+#define RCC_BASE			(AHB_BASE + RCC_OFFSET)
+
+// Offset to RCC_IOPENR register
+#define RCC_IOPENR_OFFSET	(0x34UL)
+
+// Address to RCC_IOPENR register
+#define RCC_IOPENR_ADDR		(*(volatile unsigned int *) (RCC_BASE + RCC_IOPENR_OFFSET))
+
+// Offset for GPIOA mode register
+#define GPIOA_MODER_OFFSET	(0x00UL)
+
+// Address for GPIOA mode register
+#define GPIOA_MODER_ADDR	(*(volatile unsigned int *) (GPIOA_BASE + GPIOA_MODER_OFFSET))
+
+// Offset for GPIOA output data register
+#define GPIOA_ODR_OFFSET	(0x14UL)
+
+// Address for GPIOA output data register
+#define GPIOA_ODR_ADDR		(*(volatile unsigned int *) (GPIOA_BASE + GPIOA_ODR_OFFSET))
+
+// Bitmask to enable GPIOA (bit 0)
+#define GPIOA_EN			(1U<<0)
+
+// Bitmask to select GPIOA pin 5
+#define GPIOA_PIN5			(1U<<5)
+
+// Alias for pin 5 representing LED pin
+#define LED_PIN				GPIOA_PIN5
+
+// Main program
+int main(void) {
+
+	// Enable clock access to GPIOA
+	RCC_IOPENR_ADDR |= GPIOA_EN;
+
+	// Set bit 10 to 1
+	GPIOA_MODER_ADDR |= (1U<<10);
+
+	// Set bit 11 to 0
+	GPIOA_MODER_ADDR &= ~(1U<<11);
+
+	// Main loop
+	while(1) {
+
+		// Toggle PA5
+		GPIOA_ODR_ADDR ^= LED_PIN;
+	}
+}
+
+
+
+
+
+
