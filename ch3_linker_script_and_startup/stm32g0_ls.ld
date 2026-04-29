@@ -14,7 +14,7 @@ minStackSize = 0x400;
 SECTIONS {
 
     .text : {
-        . = ALIGN(4) /* Aligns the start of the section to a 4-byte boundary */
+        . = ALIGN(4); /* Aligns the start of the section to a 4-byte boundary */
         
         *(.isr_vector_tbl) /* Pulls in all sections named .isr_vector_tbl from input files into current location in .text section */
 
@@ -22,10 +22,34 @@ SECTIONS {
 
         *(.rodata) /* Pulls in all sections named .rodata from input files into current location in .text section */
 
-        . = ALIGN(4) /* Aligns the end of the section to a 4-byte boundary */
+        . = ALIGN(4); /* Aligns the end of the section to a 4-byte boundary */
 
         _endtext = .; /* Symbol marking end of .text seciton. Used as a pointer in startup file. */
     } > FLASH   /* Specifies section to be placed in FLASH memory as defined earlier */
 
+    .data : {
+        . = ALIGN(4);
+
+        _startdata = .; /* Symbol to start of .data section. Used as pointer */
+
+        *(.data) /* Pulls in all sections named .data from input files */
+
+        . = ALIGN(4);
+
+        _enddata = .;
+    } > SRAM AT> FLASH /* In form "> (VMA) AT> (LMA)". Initial values in FLASH, store in SRAM at runtime. */
+
+    .bss : {
+        . = ALIGN(4);
+
+        _startbss = .;
+
+        *(.bss)
+
+        . = ALIGN(4);
+
+        _endbss = .;
+
+    } > SRAM
 
 }
