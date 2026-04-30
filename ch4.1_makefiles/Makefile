@@ -1,6 +1,6 @@
 CC = arm-none-eabi-gcc
 COMPILER_FLAGS = -c -mcpu=cortex-m0 -mthumb -std=gnu11
-LINKER_FLAGS = -nostdlib -T stm32g0_ls.ld *.o -o 4.1_makefiles.elf -Wl,-Map=5_makefiles.map
+LINKER_FLAGS = -nostdlib -T stm32g0_ls.ld *.o -o 4.1_makefiles.elf -Wl,-Map=4.1_makefiles.map
 
 final : 4.1_makefiles.elf 
 
