@@ -18,7 +18,7 @@ typedef struct {
 // RCC Struct
 typedef struct {
 	volatile uint32_t DUMMY[13]; // Padding to start at relevant offset
-	volatile uint32_t IOPENR;	 // Offset: 0x34
+	volatile uint32_t IOPENR;	 // Offset: 0x34 - For STM32G07
 } RCC_TypeDef;
 
 // Base addresses
