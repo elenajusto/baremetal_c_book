@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 /*Symbols defined in the linker script */
 extern uint32_t _endstack;
 extern uint32_t _endtext;
@@ -22,7 +24,7 @@ uint32_t vector_tbl[] __attribute__((section(".isr_vector_tbl")))={
 	(uint32_t)&NMI_Handler,
 	(uint32_t)&HardFault_Handler,
 	(uint32_t)&MemManage_Handler,
-}
+};
 
 /* Default handler that enters an infinite loop */
 void Default_Handler(void)
