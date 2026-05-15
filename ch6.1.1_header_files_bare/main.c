@@ -1,6 +1,6 @@
 // Microcontroller: STM32G071R
 #define STM32G071xx
-#include "stm32g0xx.h"
+#include <stm32g0xx.h>
 
 // Bit mask
 #define GPIOAEN		(1U<<0)		// Bit mask for GPIOA A bit 0
@@ -22,7 +22,7 @@ int main(void) {
 		GPIOA->ODR ^= LED_PIN;
 
 		// Delay
-		for (int i = 0; i < 1500000; i++){}
+		for (int i = 0; i < 500000; i++){}
 	}
 }
 

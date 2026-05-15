@@ -1,8 +1,13 @@
 CC = arm-none-eabi-gcc
-COMPILER_FLAGS = -c -mcpu=cortex-m0 -mthumb -std=gnu11
+
+COMPILER_FLAGS = -c -mcpu=cortex-m0 -mthumb -std=gnu11 \
+	-nostdlib \
+	-I CMSIS/Device/ST/STM32G0xx/Include \
+	-I CMSIS/Include
+
 LINKER_FLAGS = -nostdlib -T stm32g0_ls.ld *.o -o 5_periph.elf -Wl,-Map=5_periph.map
 
-final : 5_periph.elf 
+final : 5_periph.elf
 
 main.o : main.c
 	$(CC) $(COMPILER_FLAGS) $^ -o $@
