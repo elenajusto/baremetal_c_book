@@ -1,0 +1,22 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Cortex Debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/10_uart.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            // stop at first CPU instruction
+            "breakAfterReset": true,
+            "device": "stm32g0",
+            "servertype": "openocd",
+            "gdbPath": "arm-none-eabi-gdb",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32g0x.cfg"
+            ],
+            "internalConsoleOptions": "neverOpen",
+        }
+    ]
+}
