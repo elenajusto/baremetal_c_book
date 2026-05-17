@@ -42,22 +42,20 @@ void i2c_init(void) {
     GPIOB->AFR[1] &= ~(1<<0);
 
     // enable clock access to I2C1
-
+    RCC->APBENR1 |= (1<<21);
 
     // enter I2C reset mode
-
+    RCC->APBRSTR1 |= (1<<21);
 
     // exit I2C reset mode
+    RCC->APBRSTR1 &= ~(1<<21);
 
-
-    // set I2C peripheral clock frequency
-
-
-    // set I2C standard mode
-
-
-    // set I2C rise time
-
+    // set I2C peripheral clock - as per RM0444 page 951
+    I2C1->TIMINGR  = (0x3 << 28);  // PRESC
+    I2C1->TIMINGR |= (0x4 << 20);  // SCLDEL
+    I2C1->TIMINGR |= (0x2 << 16);  // SDADEL
+    I2C1->TIMINGR |= (0xF <<  8);  // SCLH
+    I2C1->TIMINGR |= (0x13 << 0);  // SCLL
 
     // enable I2C1 module
 
