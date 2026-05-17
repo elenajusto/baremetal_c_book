@@ -6,6 +6,7 @@
     PB9 --- SDA
 */
 
+// setup i2c1 peripheral
 void i2c_init(void) {
     // enable clock access to GPIOB
     RCC->IOPENR |= (1<<1);    
@@ -59,4 +60,9 @@ void i2c_init(void) {
 
     // enable I2C1 module
     I2C1->CR1 |= (1<<0);
+}
+
+// i2c1 read byte function
+void i2c1_byte_read(char target_add, char controller_addr, char* data) {
+    volatile int temp;
 }
