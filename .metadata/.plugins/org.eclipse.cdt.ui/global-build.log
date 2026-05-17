@@ -1,46 +1,49 @@
-09:49:47 **** Incremental Build of configuration Debug for project hal_uart_cubeide_cubemx ****
+13:05:02 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "hal_uart_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_uart_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_uart_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: hal_uart_cubeide_cubemx.elf
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch13_i2c_cubeide.elf
  
-arm-none-eabi-size  hal_uart_cubeide_cubemx.elf 
-arm-none-eabi-objdump -h -S hal_uart_cubeide_cubemx.elf  > "hal_uart_cubeide_cubemx.list"
+arm-none-eabi-size  ch13_i2c_cubeide.elf 
+arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
    text	   data	    bss	    dec	    hex	filename
-  15372	     92	   2052	  17516	   446c	hal_uart_cubeide_cubemx.elf
+   3924	     92	   1900	   5916	   171c	ch13_i2c_cubeide.elf
 Finished building: default.size.stdout
  
-Finished building: hal_uart_cubeide_cubemx.list
+Finished building: ch13_i2c_cubeide.list
  
-09:50:05 **** Incremental Build of configuration Debug for project ch10_uart_cubeide ****
+13:05:06 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
 make -j12 all 
-arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32g071rbtx.d" -MT"Startup/startup_stm32g071rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32g071rbtx.o" "../Startup/startup_stm32g071rbtx.s"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
-arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "ch10_uart_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch10_uart_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch10_uart_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch10_uart_cubeide.elf
- 
-arm-none-eabi-size  ch10_uart_cubeide.elf 
-arm-none-eabi-objdump -h -S ch10_uart_cubeide.elf  > "ch10_uart_cubeide.list"
+arm-none-eabi-size  ch13_i2c_cubeide.elf 
    text	   data	    bss	    dec	    hex	filename
-   3816	     92	   1900	   5808	   16b0	ch10_uart_cubeide.elf
+   3924	     92	   1900	   5916	   171c	ch13_i2c_cubeide.elf
 Finished building: default.size.stdout
  
-Finished building: ch10_uart_cubeide.list
- 
-09:50:40 **** Incremental Build of configuration Debug for project hal_uart_cubeide_cubemx ****
+13:07:48 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
 make -j12 all 
-arm-none-eabi-size  hal_uart_cubeide_cubemx.elf 
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch13_i2c_cubeide.elf
+ 
+arm-none-eabi-size  ch13_i2c_cubeide.elf 
+arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
    text	   data	    bss	    dec	    hex	filename
-  15372	     92	   2052	  17516	   446c	hal_uart_cubeide_cubemx.elf
+   3924	     92	   1900	   5916	   171c	ch13_i2c_cubeide.elf
 Finished building: default.size.stdout
  
-09:53:23 **** Incremental Build of configuration Debug for project ch10_uart_cubeide ****
+Finished building: ch13_i2c_cubeide.list
+ 
+13:09:14 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
 make -j12 all 
-arm-none-eabi-size  ch10_uart_cubeide.elf 
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch13_i2c_cubeide.elf
+ 
+arm-none-eabi-size  ch13_i2c_cubeide.elf 
+arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
    text	   data	    bss	    dec	    hex	filename
-   3816	     92	   1900	   5808	   16b0	ch10_uart_cubeide.elf
+   3952	     92	   1900	   5944	   1738	ch13_i2c_cubeide.elf
 Finished building: default.size.stdout
+ 
+Finished building: ch13_i2c_cubeide.list
  

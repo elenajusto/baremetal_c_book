@@ -8,6 +8,6 @@ int main(void) {
 
 	// program loop
 	while(1) {
-		printf("meow...\r\n");
+		printf("atlas is best meow...\r\n");
 	}
 }

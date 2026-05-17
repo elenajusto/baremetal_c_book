@@ -1,0 +1,16 @@
+#define STM32G071xx
+#include "stm32g0xx.h"
+
+/*
+    PB8 --- SCL
+    PB9 --- SDA
+*/
+
+void i2c_init(void) {
+    // enable clock access to GPIOB
+    RCC->IOPENR |= (1<<1);    
+    
+    // set alternate function mode for PB8 and PB9
+    GPIOB->MODER |= (1<<19);    // set 1 0
+    GPIOB->MODER |= (1<<17);    // set 1 0
+}

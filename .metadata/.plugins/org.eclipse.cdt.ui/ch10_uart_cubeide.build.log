@@ -1,10 +1,17 @@
-09:53:23 **** Incremental Build of configuration Debug for project ch10_uart_cubeide ****
+11:23:10 **** Incremental Build of configuration Debug for project ch10_uart_cubeide ****
 make -j12 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch10_uart_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ch10_uart_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch10_uart_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch10_uart_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch10_uart_cubeide.elf
+ 
 arm-none-eabi-size  ch10_uart_cubeide.elf 
+arm-none-eabi-objdump -h -S ch10_uart_cubeide.elf  > "ch10_uart_cubeide.list"
    text	   data	    bss	    dec	    hex	filename
-   3816	     92	   1900	   5808	   16b0	ch10_uart_cubeide.elf
+   3828	     92	   1900	   5820	   16bc	ch10_uart_cubeide.elf
 Finished building: default.size.stdout
  
+Finished building: ch10_uart_cubeide.list
+ 
 
-09:53:23 Build Finished. 0 errors, 0 warnings. (took 151ms)
+11:23:12 Build Finished. 0 errors, 0 warnings. (took 1s.923ms)
 
