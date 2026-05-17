@@ -22,7 +22,11 @@ void i2c_init(void) {
     GPIOB->OTYPER |= (1<<9);
 
     // enable pull up for PB8 and PB9
+    GPIOB->PUPDR &= ~(1<<19);
+    GPIOB->PUPDR |= (1<<18);
 
+    GPIOB->PUPDR &= ~(1<<17);
+    GPIOB->PUPDR |= (1<<16);
 
     // set PB8 and PB9 alternate function to I2C
 
