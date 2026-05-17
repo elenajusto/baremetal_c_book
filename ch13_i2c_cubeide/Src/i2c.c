@@ -28,8 +28,18 @@ void i2c_init(void) {
     GPIOB->PUPDR &= ~(1<<17);
     GPIOB->PUPDR |= (1<<16);
 
-    // set PB8 and PB9 alternate function to I2C
+    // set PB8 and PB9 alternate function to I2C - AF6
+    // pin 9[3:0] - 7 6 5 4 - 0 1 1 0
+    GPIOB->AFR[1] &= ~(1<<7);
+    GPIOB->AFR[1] |= (1<<6);
+    GPIOB->AFR[1] |= (1<<5);
+    GPIOB->AFR[1] &= ~(1<<4);
 
+    // pin 8[3:0] - 3 2 1 0 - 0 1 1 0
+    GPIOB->AFR[1] &= ~(1<<3);
+    GPIOB->AFR[1] |= (1<<2);
+    GPIOB->AFR[1] |= (1<<1);
+    GPIOB->AFR[1] &= ~(1<<0);
 
     // enable clock access to I2C1
 
