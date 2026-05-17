@@ -58,5 +58,5 @@ void i2c_init(void) {
     I2C1->TIMINGR |= (0x13 << 0);  // SCLL
 
     // enable I2C1 module
-
+    I2C1->CR1 |= (1<<0);
 }

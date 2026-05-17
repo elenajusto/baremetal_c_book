@@ -1,10 +1,17 @@
-14:36:12 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
+14:39:56 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
 make -j12 all 
+arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
+arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch13_i2c_cubeide.elf
+ 
 arm-none-eabi-size  ch13_i2c_cubeide.elf 
+arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
    text	   data	    bss	    dec	    hex	filename
-   4216	     92	   1900	   6208	   1840	ch13_i2c_cubeide.elf
+   4228	     92	   1900	   6220	   184c	ch13_i2c_cubeide.elf
 Finished building: default.size.stdout
  
+Finished building: ch13_i2c_cubeide.list
+ 
 
-14:36:12 Build Finished. 0 errors, 0 warnings. (took 147ms)
+14:39:57 Build Finished. 0 errors, 0 warnings. (took 455ms)
 
