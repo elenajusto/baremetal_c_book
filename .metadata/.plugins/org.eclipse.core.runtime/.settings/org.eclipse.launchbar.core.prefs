@@ -1,11 +1,14 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ch2-RegisterManipulation Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch2_constructing_peripheral_register_from_memory_addresses,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch6.1_header_files Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart (1)
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ch2-RegisterManipulation Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch2_constructing_peripheral_register_from_memory_addresses,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch6.1_header_files Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart (1),org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:hal_uart_cubeide_cubemx,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart_cubeide Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ch2-RegisterManipulation\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:Ch2-RegisterManipulation\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart\ (1)/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart\ (1)/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:ch10_uart/activeLaunchTarget=null\:---
 org.eclipse.launchbar.core.descriptorType.default\:ch10_uart/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:ch10_uart_cubeide\ Debug/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:ch10_uart_cubeide\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

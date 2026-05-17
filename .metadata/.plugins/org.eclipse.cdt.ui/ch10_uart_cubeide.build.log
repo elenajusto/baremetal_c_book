@@ -1,0 +1,10 @@
+09:53:23 **** Incremental Build of configuration Debug for project ch10_uart_cubeide ****
+make -j12 all 
+arm-none-eabi-size  ch10_uart_cubeide.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3816	     92	   1900	   5808	   16b0	ch10_uart_cubeide.elf
+Finished building: default.size.stdout
+ 
+
+09:53:23 Build Finished. 0 errors, 0 warnings. (took 151ms)
+

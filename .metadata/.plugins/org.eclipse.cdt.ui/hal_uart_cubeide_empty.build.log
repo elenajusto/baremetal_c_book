@@ -1,0 +1,71 @@
+09:38:42 **** Build of configuration Debug for project hal_uart_cubeide_empty ****
+make -j12 all 
+arm-none-eabi-gcc -mcpu=cortex-m0plus -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32g071rbtx.d" -MT"Startup/startup_stm32g071rbtx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32g071rbtx.o" "../Startup/startup_stm32g071rbtx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+../Src/main.c: In function 'main':
+../Src/main.c:2:5: error: unknown type name 'UART_HandleTypeDef'
+    2 |     UART_HandleTypeDef huart2;
+      |     ^~~~~~~~~~~~~~~~~~
+../Src/main.c:5:5: warning: implicit declaration of function 'HAL_Init' [-Wimplicit-function-declaration]
+    5 |     HAL_Init();
+      |     ^~~~~~~~
+../Src/main.c:8:5: warning: implicit declaration of function 'SystemClock_Config' [-Wimplicit-function-declaration]
+    8 |     SystemClock_Config();
+      |     ^~~~~~~~~~~~~~~~~~
+../Src/main.c:11:11: error: request for member 'Instance' in something not a structure or union
+   11 |     huart2.Instance = USART2;
+      |           ^
+../Src/main.c:11:23: error: 'USART2' undeclared (first use in this function)
+   11 |     huart2.Instance = USART2;
+      |                       ^~~~~~
+../Src/main.c:11:23: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c:12:11: error: request for member 'Init' in something not a structure or union
+   12 |     huart2.Init.BaudRate = 38400;
+      |           ^
+../Src/main.c:13:11: error: request for member 'Init' in something not a structure or union
+   13 |     huart2.Init.Wordlength = UART_WORDLENGTH_8B;
+      |           ^
+../Src/main.c:13:30: error: 'UART_WORDLENGTH_8B' undeclared (first use in this function)
+   13 |     huart2.Init.Wordlength = UART_WORDLENGTH_8B;
+      |                              ^~~~~~~~~~~~~~~~~~
+../Src/main.c:14:11: error: request for member 'Init' in something not a structure or union
+   14 |     huart2.Init.StopBits = UART_STOPBITS_1;
+      |           ^
+../Src/main.c:14:28: error: 'UART_STOPBITS_1' undeclared (first use in this function)
+   14 |     huart2.Init.StopBits = UART_STOPBITS_1;
+      |                            ^~~~~~~~~~~~~~~
+../Src/main.c:15:11: error: request for member 'Init' in something not a structure or union
+   15 |     huart2.Init.Parity = UART_PARITY_NONE;
+      |           ^
+../Src/main.c:15:26: error: 'UART_PARITY_NONE' undeclared (first use in this function)
+   15 |     huart2.Init.Parity = UART_PARITY_NONE;
+      |                          ^~~~~~~~~~~~~~~~
+../Src/main.c:16:11: error: request for member 'Init' in something not a structure or union
+   16 |     huart2.Init.Mode = UART_MODE_TX_RX;
+      |           ^
+../Src/main.c:16:24: error: 'UART_MODE_TX_RX' undeclared (first use in this function)
+   16 |     huart2.Init.Mode = UART_MODE_TX_RX;
+      |                        ^~~~~~~~~~~~~~~
+../Src/main.c:17:11: error: request for member 'Init' in something not a structure or union
+   17 |     huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |           ^
+../Src/main.c:17:29: error: 'UART_HWCONTROL_NONE' undeclared (first use in this function)
+   17 |     huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+      |                             ^~~~~~~~~~~~~~~~~~~
+../Src/main.c:18:11: error: request for member 'Init' in something not a structure or union
+   18 |     huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+      |           ^
+../Src/main.c:18:32: error: 'UART_OVERSAMPLING_16' undeclared (first use in this function)
+   18 |     huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+      |                                ^~~~~~~~~~~~~~~~~~~~
+../Src/main.c:19:5: warning: implicit declaration of function 'HAL_UART_Init' [-Wimplicit-function-declaration]
+   19 |     HAL_UART_Init(&huart2);
+      |     ^~~~~~~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+09:38:43 Build Failed. 18 errors, 3 warnings. (took 837ms)
+

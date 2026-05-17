@@ -1,0 +1,10 @@
+09:50:40 **** Incremental Build of configuration Debug for project hal_uart_cubeide_cubemx ****
+make -j12 all 
+arm-none-eabi-size  hal_uart_cubeide_cubemx.elf 
+   text	   data	    bss	    dec	    hex	filename
+  15372	     92	   2052	  17516	   446c	hal_uart_cubeide_cubemx.elf
+Finished building: default.size.stdout
+ 
+
+09:50:40 Build Finished. 0 errors, 0 warnings. (took 194ms)
+

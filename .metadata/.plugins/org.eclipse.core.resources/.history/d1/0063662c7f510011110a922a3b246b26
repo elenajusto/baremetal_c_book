@@ -1,0 +1,12 @@
+int main(void) {
+    UART_HandleTypeDef huart2;
+
+    // initialise HAL
+    HAL_Init();   
+
+    // Configure system clock
+    SystemClock_Config();
+
+    // Configure USART2
+    huart2.instance = USART2
+}
