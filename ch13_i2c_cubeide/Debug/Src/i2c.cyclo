@@ -1,2 +1,0 @@
-../Src/i2c.c:10:6:i2c_init	1
-../Src/i2c.c:66:6:i2c1_byte_read	2

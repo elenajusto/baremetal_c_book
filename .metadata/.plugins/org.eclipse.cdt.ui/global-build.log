@@ -1,68 +1,150 @@
-14:36:10 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
+19:27:06 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
-arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch13_i2c_cubeide.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:27: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   75 |         HAL_StatusTypeDef ret;
+      |                           ^~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:22: warning: 'BMP280_PRESSURE_ADDR' defined but not used [-Wunused-const-variable=]
+   50 | static const uint8_t BMP280_PRESSURE_ADDR = 0xF7;
+      |                      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:49:22: warning: 'BMP280_ADDR' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t BMP280_ADDR = (0x76 << 1);
+      |                      ^~~~~~~~~~~
+arm-none-eabi-gcc -o "hal_i2c_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_i2c_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_i2c_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_i2c_cubeide_cubemx.elf
  
-arm-none-eabi-size  ch13_i2c_cubeide.elf 
-arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
+arm-none-eabi-objdump -h -S hal_i2c_cubeide_cubemx.elf  > "hal_i2c_cubeide_cubemx.list"
    text	   data	    bss	    dec	    hex	filename
-   4216	     92	   1900	   6208	   1840	ch13_i2c_cubeide.elf
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
 Finished building: default.size.stdout
  
-Finished building: ch13_i2c_cubeide.list
+Finished building: hal_i2c_cubeide_cubemx.list
  
-14:36:12 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
+19:27:12 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
 make -j12 all 
-arm-none-eabi-size  ch13_i2c_cubeide.elf 
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
    text	   data	    bss	    dec	    hex	filename
-   4216	     92	   1900	   6208	   1840	ch13_i2c_cubeide.elf
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
 Finished building: default.size.stdout
  
-14:39:56 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
+19:27:40 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
-arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch13_i2c_cubeide.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:27: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   75 |         HAL_StatusTypeDef ret;
+      |                           ^~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:50:22: warning: 'BMP280_PRESSURE_ADDR' defined but not used [-Wunused-const-variable=]
+   50 | static const uint8_t BMP280_PRESSURE_ADDR = 0xF7;
+      |                      ^~~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:49:22: warning: 'BMP280_ADDR' defined but not used [-Wunused-const-variable=]
+   49 | static const uint8_t BMP280_ADDR = (0x76 << 1);
+      |                      ^~~~~~~~~~~
+arm-none-eabi-gcc -o "hal_i2c_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_i2c_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_i2c_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_i2c_cubeide_cubemx.elf
  
-arm-none-eabi-size  ch13_i2c_cubeide.elf 
-arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
+arm-none-eabi-objdump -h -S hal_i2c_cubeide_cubemx.elf  > "hal_i2c_cubeide_cubemx.list"
    text	   data	    bss	    dec	    hex	filename
-   4228	     92	   1900	   6220	   184c	ch13_i2c_cubeide.elf
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
 Finished building: default.size.stdout
  
-Finished building: ch13_i2c_cubeide.list
+Finished building: hal_i2c_cubeide_cubemx.list
  
-15:00:51 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
+19:33:22 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/i2c.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/i2c.d" -MT"Src/i2c.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/i2c.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32G071RBTx -DSTM32 -DSTM32G0 -DNUCLEO_G071RB -c -I../Inc -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Include" -I"C:/Users/elena/STM32CubeIDE/baremetal_embedded_c_programming/ch13_i2c_cubeide/chip_headers/CMSIS/Device/ST/STM32G0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-../Src/i2c.c: In function 'i2c1_byte_read':
-../Src/i2c.c:67:18: warning: unused variable 'temp' [-Wunused-variable]
-   67 |     volatile int temp;
-      |                  ^~~~
-../Src/main.c: In function 'main':
-../Src/main.c:10:9: warning: implicit declaration of function 'i2c_init' [-Wimplicit-function-declaration]
-   10 |         i2c_init();
-      |         ^~~~~~~~
-../Src/main.c:13:5: warning: implicit declaration of function 'i2c1_byte_read' [-Wimplicit-function-declaration]
-   13 |     i2c1_byte_read(0x68, 0, 0);  // dummy address
-      |     ^~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "ch13_i2c_cubeide.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\ch13_i2c_cubeide\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch13_i2c_cubeide.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch13_i2c_cubeide.elf
- 
-arm-none-eabi-size  ch13_i2c_cubeide.elf 
-arm-none-eabi-objdump -h -S ch13_i2c_cubeide.elf  > "ch13_i2c_cubeide.list"
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
    text	   data	    bss	    dec	    hex	filename
-   4356	     92	   1900	   6348	   18cc	ch13_i2c_cubeide.elf
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
 Finished building: default.size.stdout
  
-Finished building: ch13_i2c_cubeide.list
+19:37:34 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:27: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   75 |         HAL_StatusTypeDef ret;
+      |                           ^~~
+arm-none-eabi-gcc -o "hal_i2c_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_i2c_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_i2c_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_i2c_cubeide_cubemx.elf
  
-15:01:20 **** Incremental Build of configuration Debug for project ch13_i2c_cubeide ****
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
+arm-none-eabi-objdump -h -S hal_i2c_cubeide_cubemx.elf  > "hal_i2c_cubeide_cubemx.list"
+   text	   data	    bss	    dec	    hex	filename
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
+Finished building: default.size.stdout
+ 
+Finished building: hal_i2c_cubeide_cubemx.list
+ 
+19:37:52 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:27: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   75 |         HAL_StatusTypeDef ret;
+      |                           ^~~
+arm-none-eabi-gcc -o "hal_i2c_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_i2c_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_i2c_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_i2c_cubeide_cubemx.elf
+ 
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
+arm-none-eabi-objdump -h -S hal_i2c_cubeide_cubemx.elf  > "hal_i2c_cubeide_cubemx.list"
+   text	   data	    bss	    dec	    hex	filename
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
+Finished building: default.size.stdout
+ 
+Finished building: hal_i2c_cubeide_cubemx.list
+ 
+19:38:34 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:27: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   75 |         HAL_StatusTypeDef ret;
+      |                           ^~~
+arm-none-eabi-gcc -o "hal_i2c_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_i2c_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_i2c_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_i2c_cubeide_cubemx.elf
+ 
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
+arm-none-eabi-objdump -h -S hal_i2c_cubeide_cubemx.elf  > "hal_i2c_cubeide_cubemx.list"
+   text	   data	    bss	    dec	    hex	filename
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
+Finished building: default.size.stdout
+ 
+Finished building: hal_i2c_cubeide_cubemx.list
+ 
+19:41:27 **** Incremental Build of configuration Debug for project hal_i2c_cubeide_cubemx ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G071xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:75:27: warning: variable 'ret' set but not used [-Wunused-but-set-variable]
+   75 |         HAL_StatusTypeDef ret;
+      |                           ^~~
+arm-none-eabi-gcc -o "hal_i2c_cubeide_cubemx.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\hal_i2c_cubeide_cubemx\STM32G071RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="hal_i2c_cubeide_cubemx.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: hal_i2c_cubeide_cubemx.elf
+ 
+arm-none-eabi-size  hal_i2c_cubeide_cubemx.elf 
+arm-none-eabi-objdump -h -S hal_i2c_cubeide_cubemx.elf  > "hal_i2c_cubeide_cubemx.list"
+   text	   data	    bss	    dec	    hex	filename
+  13712	     12	   1804	  15528	   3ca8	hal_i2c_cubeide_cubemx.elf
+Finished building: default.size.stdout
+ 
+Finished building: hal_i2c_cubeide_cubemx.list
+ 
+17:45:17 **** Build of configuration Debug for project ch13_i2c_cubeide ****
 make -j12 all 
 arm-none-eabi-size  ch13_i2c_cubeide.elf 
    text	   data	    bss	    dec	    hex	filename
-   4356	     92	   1900	   6348	   18cc	ch13_i2c_cubeide.elf
+   4384	     92	   1900	   6376	   18e8	ch13_i2c_cubeide.elf
+Finished building: default.size.stdout
+ 
+18:23:44 **** Build of configuration Debug for project Ch2-RegisterManipulation ****
+make -j12 all 
+arm-none-eabi-size  Ch2-RegisterManipulation.elf 
+   text	   data	    bss	    dec	    hex	filename
+    552	      0	   1568	   2120	    848	Ch2-RegisterManipulation.elf
 Finished building: default.size.stdout
  
