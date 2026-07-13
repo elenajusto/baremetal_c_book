@@ -1,0 +1,7 @@
+2026-07-13 12:29:54,232 [INFO] Activator:176 - 
+
+
+2026-07-13 12:29:54,234 [INFO] Activator:177 - !SESSION log4j initialized
+2026-07-13 12:29:56,295 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-07-13 12:29:56,658 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] [Fatal Error] :1:1: Premature end of file.
+2026-07-13 12:29:56,659 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
