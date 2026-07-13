@@ -30,22 +30,3 @@
 #define PIN5          (1U<<5)
 //  16: Alias for PIN5 representing LED pin
 #define LED_PIN       PIN5
-
-//  17: Start of main function
-int main(void)
-{
-    //  18: Enable clock access to GPIOA
-    RCC_AHB1EN_R |= GPIOAEN;
-
-    GPIOA_MODE_R |= (1U<<10);  //  19: Set bit 10 to 1
-    GPIOA_MODE_R &= ~(1U<<11); //  20: Set bit 11 to 0
-
-    //  21: Start of infinite loop
-    while(1)
-    {
-    	//  22: Set PA5(LED_PIN) high
-    	GPIOA_OD_R |= LED_PIN;
-
-    }  //  23: End of infinite loop
-
-}  //  24: End of main function
