@@ -1,63 +1,21 @@
-12:35:33 **** Incremental Build of configuration Debug for project ch2_register_manipulation ****
+15:00:47 **** Incremental Build of configuration Debug for project ch6_header_files ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "ch2_register_manipulation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\STM32F411X\ch2_register_manipulation\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch2_register_manipulation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch2_register_manipulation.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch6_header_files/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch6_header_files/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ch6_header_files.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch6_header_files\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch6_header_files.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch6_header_files.elf
  
-arm-none-eabi-size  ch2_register_manipulation.elf 
-arm-none-eabi-objdump -h -S ch2_register_manipulation.elf  > "ch2_register_manipulation.list"
+arm-none-eabi-size  ch6_header_files.elf 
+arm-none-eabi-objdump -h -S ch6_header_files.elf  > "ch6_header_files.list"
    text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	ch2_register_manipulation.elf
+    748	      0	   1568	   2316	    90c	ch6_header_files.elf
 Finished building: default.size.stdout
  
-Finished building: ch2_register_manipulation.list
+Finished building: ch6_header_files.list
  
-12:37:12 **** Incremental Build of configuration Debug for project ch2_register_manipulation ****
+15:00:56 **** Incremental Build of configuration Debug for project ch6_header_files ****
 make -j12 all 
-arm-none-eabi-size  ch2_register_manipulation.elf 
+arm-none-eabi-size  ch6_header_files.elf 
    text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	ch2_register_manipulation.elf
-Finished building: default.size.stdout
- 
-12:41:26 **** Incremental Build of configuration Debug for project ch2_register_manipulation ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "ch2_register_manipulation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\STM32F411X\ch2_register_manipulation\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch2_register_manipulation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch2_register_manipulation.elf
- 
-arm-none-eabi-size  ch2_register_manipulation.elf 
-arm-none-eabi-objdump -h -S ch2_register_manipulation.elf  > "ch2_register_manipulation.list"
-   text	   data	    bss	    dec	    hex	filename
-    712	      0	   1568	   2280	    8e8	ch2_register_manipulation.elf
-Finished building: default.size.stdout
- 
-Finished building: ch2_register_manipulation.list
- 
-12:41:33 **** Incremental Build of configuration Debug for project ch2_register_manipulation ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "ch2_register_manipulation.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\STM32CubeIDE\baremetal_embedded_c_programming\STM32F411X\ch2_register_manipulation\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch2_register_manipulation.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch2_register_manipulation.elf
- 
-arm-none-eabi-size  ch2_register_manipulation.elf 
-arm-none-eabi-objdump -h -S ch2_register_manipulation.elf  > "ch2_register_manipulation.list"
-   text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	ch2_register_manipulation.elf
-Finished building: default.size.stdout
- 
-Finished building: ch2_register_manipulation.list
- 
-12:41:40 **** Incremental Build of configuration Debug for project ch2_register_manipulation ****
-make -j12 all 
-arm-none-eabi-size  ch2_register_manipulation.elf 
-   text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	ch2_register_manipulation.elf
-Finished building: default.size.stdout
- 
-12:41:45 **** Incremental Build of configuration Debug for project ch2_register_manipulation ****
-make -j12 all 
-arm-none-eabi-size  ch2_register_manipulation.elf 
-   text	   data	    bss	    dec	    hex	filename
-    728	      0	   1568	   2296	    8f8	ch2_register_manipulation.elf
+    748	      0	   1568	   2316	    90c	ch6_header_files.elf
 Finished building: default.size.stdout
  
