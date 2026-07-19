@@ -1,13 +1,31 @@
 #include "gpio.h"
 
+bool btn_state;
+
 int main(void) {
 	// init led
 	led_init();
 
+	// init button
+	button_init();
+
+	// blink program
+	// while(1) {
+	// 	led_on();
+	// 	for (int i=0; i<100000; i++){}
+	// 	led_off();
+	// 	for (int i=0; i<100000; i++){}
+	// }
+
+	// button program
 	while(1) {
-		led_on();
-		for (int i=0; i<100000; i++){}
-		led_off();
-		for (int i=0; i<100000; i++){}
+		btn_state = get_btn_state();
+
+		if (btn_state) {
+			led_on();
+		} else {
+			led_off();
+		}
 	}
+	
 }
