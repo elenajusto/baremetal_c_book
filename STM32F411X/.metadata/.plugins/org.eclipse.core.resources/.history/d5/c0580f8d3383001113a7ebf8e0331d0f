@@ -1,0 +1,6 @@
+#include "gpio.h"
+
+int main(void) {
+	// init led
+	led_init();
+}
