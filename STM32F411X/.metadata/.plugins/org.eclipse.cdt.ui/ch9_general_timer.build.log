@@ -1,0 +1,10 @@
+09:29:52 **** Incremental Build of configuration Debug for project ch9_general_timer ****
+make -j12 all 
+arm-none-eabi-size  ch9_general_timer.elf 
+   text	   data	    bss	    dec	    hex	filename
+    872	      0	   1568	   2440	    988	ch9_general_timer.elf
+Finished building: default.size.stdout
+ 
+
+09:29:52 Build Finished. 0 errors, 0 warnings. (took 141ms)
+

@@ -1,23 +1,21 @@
-13:40:07 **** Incremental Build of configuration Debug for project ch8_systick ****
+09:29:21 **** Incremental Build of configuration Debug for project ch9_general_timer ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
-arm-none-eabi-gcc -o "ch8_systick.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch8_systick\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch8_systick.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch8_systick.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch9_general_timer/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch9_general_timer/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ch9_general_timer.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch9_general_timer\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch9_general_timer.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch9_general_timer.elf
  
-arm-none-eabi-size  ch8_systick.elf 
-arm-none-eabi-objdump -h -S ch8_systick.elf  > "ch8_systick.list"
+arm-none-eabi-size  ch9_general_timer.elf 
+arm-none-eabi-objdump -h -S ch9_general_timer.elf  > "ch9_general_timer.list"
    text	   data	    bss	    dec	    hex	filename
-    872	      0	   1568	   2440	    988	ch8_systick.elf
+    872	      0	   1568	   2440	    988	ch9_general_timer.elf
 Finished building: default.size.stdout
  
-Finished building: ch8_systick.list
+Finished building: ch9_general_timer.list
  
-13:40:15 **** Incremental Build of configuration Debug for project ch8_systick ****
+09:29:52 **** Incremental Build of configuration Debug for project ch9_general_timer ****
 make -j12 all 
-arm-none-eabi-size  ch8_systick.elf 
+arm-none-eabi-size  ch9_general_timer.elf 
    text	   data	    bss	    dec	    hex	filename
-    872	      0	   1568	   2440	    988	ch8_systick.elf
+    872	      0	   1568	   2440	    988	ch9_general_timer.elf
 Finished building: default.size.stdout
  

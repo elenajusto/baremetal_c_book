@@ -1,0 +1,12 @@
+#include "gpio.h"
+#include "tim.h"
+
+int main(void) {
+	// init led
+	led_init();
+
+	// init timer
+	tim2_1hz_init();
+
+	// loop
+}
