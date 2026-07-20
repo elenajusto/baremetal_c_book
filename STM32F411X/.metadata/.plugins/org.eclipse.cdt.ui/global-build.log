@@ -1,21 +1,23 @@
-16:24:13 **** Incremental Build of configuration Debug for project ch7_gpio_input_output ****
+13:40:07 **** Incremental Build of configuration Debug for project ch8_systick ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch7_gpio_input_output/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch7_gpio_input_output/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "ch7_gpio_input_output.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch7_gpio_input_output\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch7_gpio_input_output.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch7_gpio_input_output.elf
+arm-none-eabi-gcc "../Src/gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/gpio.d" -MT"Src/gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/gpio.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/systick.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch8_systick/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/systick.d" -MT"Src/systick.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/systick.o"
+arm-none-eabi-gcc -o "ch8_systick.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch8_systick\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch8_systick.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch8_systick.elf
  
-arm-none-eabi-size  ch7_gpio_input_output.elf 
-arm-none-eabi-objdump -h -S ch7_gpio_input_output.elf  > "ch7_gpio_input_output.list"
+arm-none-eabi-size  ch8_systick.elf 
+arm-none-eabi-objdump -h -S ch8_systick.elf  > "ch8_systick.list"
    text	   data	    bss	    dec	    hex	filename
-    952	      0	   1568	   2520	    9d8	ch7_gpio_input_output.elf
+    872	      0	   1568	   2440	    988	ch8_systick.elf
 Finished building: default.size.stdout
  
-Finished building: ch7_gpio_input_output.list
+Finished building: ch8_systick.list
  
-16:24:16 **** Incremental Build of configuration Debug for project ch7_gpio_input_output ****
+13:40:15 **** Incremental Build of configuration Debug for project ch8_systick ****
 make -j12 all 
-arm-none-eabi-size  ch7_gpio_input_output.elf 
+arm-none-eabi-size  ch8_systick.elf 
    text	   data	    bss	    dec	    hex	filename
-    952	      0	   1568	   2520	    9d8	ch7_gpio_input_output.elf
+    872	      0	   1568	   2440	    988	ch8_systick.elf
 Finished building: default.size.stdout
  
