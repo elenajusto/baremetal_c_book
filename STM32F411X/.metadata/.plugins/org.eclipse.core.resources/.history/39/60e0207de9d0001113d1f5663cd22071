@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include "uart.h"
+
+int main(void) {
+	// Init UART
+	uart_init();
+
+	while(1) {
+		printf("Atlas says meow meow de meow meow!\r\n")
+	}
+}

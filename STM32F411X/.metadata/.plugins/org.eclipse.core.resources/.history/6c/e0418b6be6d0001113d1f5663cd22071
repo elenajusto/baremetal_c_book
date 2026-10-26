@@ -1,0 +1,71 @@
+#include <stdint.h>
+#include "uart.h"
+
+#define GPIOAEN				(1U<<0)		// GPIOA clock macro - bit 0 - APB1ENR register
+#define UART2EN				(1U<<17)	// UART2 clock macro - bit 17 - APB1ENR register
+
+#define DBG_UART_BAUDRATE	115200		// bps (bits per second)
+#define SYS_FREQ			16000000	// 16 MHz
+#define	APB1_CLK			SYS_FREQ	// APB1 peripheral clock frequency macro - 16 MHz
+#define CR1_TE				(1U<<3)		// UART transmitter macro - bit 3 - USART_CR1 register
+#define	CR1_UE				(1U<<13)	// UART enable macro - bit 13 - USART_CR1 register
+#define SR_TXE				(1U<<7)		// Transmit data register empty macro -
+
+static void uart_set_baudrate(uint32_t periph_clk, uint32_t baudrate);
+static void uart_write(int ch);
+
+/* ************** Helper Functions ************** */
+
+// Calculates the baud rate divisor for the Baud Rate Register (BRR)
+int __io_putchar(int ch) {
+	uart_write(ch);
+	return ch;
+}
+
+// Sets the buad rate for UART2
+void uart_init(void) {
+	// enable clock access to GPIOA
+	RCC->AHB1ENR |= GPIOAEN;
+
+	// set mode of PA2 to alternate function mode
+	GPIOA->MODER &=~ (1U<<4);
+	GPIOA->MODER |=  (1U<<5);
+
+	// set alternate function to AF7 (UART2_TX)
+	GPIOA->AFR[0] |=  (1U<<8);
+	GPIOA->AFR[0] |=  (1U<<9);
+	GPIOA->AFR[0] |=  (1U<<10);
+	GPIOA->AFR[0] &=~ (1U<<11);
+
+	// enable clock access to UART2
+	RCC->APB1ENR |= UART2EN;
+
+	// configure UART baud rate
+	uart_set_baudrate(APB1_CLK, DBG_UART_BAUDRATE);
+
+	// configure transfer direction
+	USART2->CR1 = CR1_TE;
+
+	// enable UART module
+	USART2->CR1 |= CR1_UE;
+}
+
+/* ************** Driver Functions ************** */
+
+static void uart_write(int ch) {
+	// make sure transmit data register is empty
+	while( !(USART2->SR & SR_TXE) ) {
+	}
+
+	// write to transmit data register
+	USART2->DR = (ch & 0xFF);
+}
+
+static uint16_t compute_uart_bd(uint32_t periph_clk, uint32_t baudrate) {
+	return( (periph_clk + (baudrate/2U)) / baudrate );
+}
+
+
+static void uart_set_baudrate(uint32_t periph_clk, uint32_t baudrate) {
+	USART2->BRR = compute_uart_bd(periph_clk, baudrate);
+}
