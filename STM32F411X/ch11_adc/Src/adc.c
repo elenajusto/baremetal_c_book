@@ -1,0 +1,51 @@
+#include "adc.h"
+
+#define GPIOAEN			(1U<<0)			// Enable clock for GPIOA - Set bit 0 in AHB1ENR register
+#define ADC1EN			(1U<<8)			// Enable clock for ADC1 - Set bit 8 in APB2ENR register
+#define ADC_CH1			(1U<<0)			// Select channel 1 for ADC conversion in SQR3 register
+#define ADC_SEQ_LEN_1	0x00			// Set the conversion sequence length to 1 in SQR1 register
+#define CR2_ADCON		(1U<<0)			// Enable ADC module - Set bit 0 in CR2 register
+#define CR2_CONT		(1U<<1)			// Enable continuous conversion mode - Set bit 1 in CR2 register
+#define CR2_SWSTART		(1U<<30)		// Start ADC conversion - Set bit 30 in CR2 register
+#define SR_EOC			(1U<<1)			// Read bit 1 in status register
+
+void pa1_adc_init(void) {
+
+	/**** Configure ADC GPIO pin ****/
+	// Enable clock access to GPIOA
+	RCC->AHB1ENR |= GPIOAEN;
+
+	// Set PA1 mode to analog
+	GPIOA->MODER |= (1U<<2);
+	GPIOA->MODER |= (1U<<3);
+
+	/**** Configure ADC module ****/
+	// Enable clock access to ADC module
+	RCC->APB2ENR |= ADC1EN;
+
+	// Set conversion sequence start
+	ADC1->SQR3 = ADC_CH1;
+
+	// Set conversion sequence length
+	ADC1->SQR1 = ADC_SEQ_LEN_1;
+
+	// Enable ADC module
+	ADC1->CR2 |= CR2_ADCON;
+}
+
+void start_conversion(void) {
+	// Enable continuous conversion
+	ADC1->CR2 |= CR2_CONT;
+
+	// Start ADC conversion
+	ADC1->CR2 |= CR2_SWSTART;
+}
+
+uint32_t adc_read(void) {
+	// Wait for conversion to be complete
+	while(! (ADC1->SR & SR_EOC) ) {
+	}
+
+	// Read converted value
+	return (ADC1->DR);
+}

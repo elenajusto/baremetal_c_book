@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include "uart.h"
+#include "adc.h"
+
+int sensor_value;
+
+int main(void) {
+	// Init UART
+	uart_init();
+
+	// Init ADC
+	pa1_adc_init();
+
+	// Start ADC
+	start_conversion();
+
+	while(1) {
+		sensor_value = adc_read();
+		printf("sensor value: %d\r\n", sensor_value);
+	}
+}
