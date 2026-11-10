@@ -1,0 +1,44 @@
+#include "adxl345.h"
+
+void adxl_read(uint8_t address, uint8_t *rxdata){
+	// set read operation
+	address |= ADXL345_READ_OPERATION;
+
+	// enable multi-byte
+	address |= ADXL345_MULTI_BYTE_ENABLE;
+
+	// pull cs line low - enable target
+
+	// send address
+
+	// read 6 bytes
+
+	// pull cs line high - disable target
+
+}
+
+void adxl_write(uint8_t, address, uint8_t value){
+	// enable multi-byte, place address into buffer
+
+	// plac data into buffer
+
+	// pull cs line low - enable target
+
+	// transmit data and address
+
+	// pull cs line high - disable target
+
+}
+
+void adxl_init(void){
+	// enable spi gpio
+
+	// config spi
+
+	// set data format range to +-4g
+
+	// reset all bits
+
+	// configure power control measure bit
+
+}

@@ -1,36 +1,18 @@
-14:01:10 **** Incremental Build of configuration Debug for project ch10_uart ****
+12:40:03 **** Incremental Build of configuration Debug for project ch12_spi2_sd ****
 make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
-arm-none-eabi-gcc -o "ch10_uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch10_uart\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch10_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch10_uart.elf
+arm-none-eabi-gcc "../Src/spi.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch12_spi2_sd/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch12_spi2_sd/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/spi.d" -MT"Src/spi.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/spi.o"
+../Src/spi.c: In function 'spi1_transmit':
+../Src/spi.c:99:17: warning: variable 'temp' set but not used [-Wunused-but-set-variable]
+   99 |         uint8_t temp;
+      |                 ^~~~
+arm-none-eabi-gcc -o "ch12_spi2_sd.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch12_spi2_sd\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch12_spi2_sd.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ch12_spi2_sd.elf
  
-arm-none-eabi-size  ch10_uart.elf 
-arm-none-eabi-objdump -h -S ch10_uart.elf  > "ch10_uart.list"
+arm-none-eabi-size  ch12_spi2_sd.elf 
+arm-none-eabi-objdump -h -S ch12_spi2_sd.elf  > "ch12_spi2_sd.list"
    text	   data	    bss	    dec	    hex	filename
-   3664	     92	   1900	   5656	   1618	ch10_uart.elf
+  16464	    456	   1944	  18864	   49b0	ch12_spi2_sd.elf
 Finished building: default.size.stdout
  
-Finished building: ch10_uart.list
- 
-14:01:41 **** Incremental Build of configuration Debug for project ch10_uart ****
-make -j12 all 
-arm-none-eabi-size  ch10_uart.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3664	     92	   1900	   5656	   1618	ch10_uart.elf
-Finished building: default.size.stdout
- 
-14:05:44 **** Incremental Build of configuration Debug for project ch10_uart ****
-make -j12 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "ch10_uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch10_uart\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch10_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: ch10_uart.elf
- 
-arm-none-eabi-size  ch10_uart.elf 
-arm-none-eabi-objdump -h -S ch10_uart.elf  > "ch10_uart.list"
-   text	   data	    bss	    dec	    hex	filename
-   3636	     92	   1900	   5628	   15fc	ch10_uart.elf
-Finished building: default.size.stdout
- 
-Finished building: ch10_uart.list
+Finished building: ch12_spi2_sd.list
  

@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "stm32f4xx.h"
+#include "uart.h"
+#include "adxl345.h"
+
+// Variables for storing accelerometer data
+int16_t accel_x, accel_y, accel_z;
+double accel_x_g, accel_y_g, accel_z_g;
+
+int main(void) {
+	while(1) {
+
+	}
+}

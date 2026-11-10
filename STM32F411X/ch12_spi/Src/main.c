@@ -14,8 +14,6 @@ int main(void) {
 	uart_init();
 	adxl_init();
 
-	printf("stm online");
-
 	while(1) {
 		// read accelerometer data
 		adxl_read(ADXL345_REG_DATA_START, data_buffer);

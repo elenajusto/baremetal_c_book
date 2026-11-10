@@ -1,0 +1,23 @@
+#ifndef ADXL345_H_
+#define ADXL345_H_
+
+#include "spi.h"
+#include <stdint.h>
+
+#define ADXL345_REG_DEVID			(0x00)		// Register address for device ID
+#define ADXL345_REG_DATA_FORMAT		(0x31)		// Register address for setting data format
+#define ADXL345_REG_POWER_CTL		(0x2D)		// Register address for power settings
+#define ADXL345_REG_DATA_START		(0x32)		// Register address for reading acceleration data
+
+#define ADXL345_RANGE_4G			(0x01)		// Bit to set measurement range to 4g
+#define ADXL345_RESET				(0x00)		// Rest Bit
+#define ADXL345_MEASURE_BIT			(0x08)		// Bit to enable measurement mode in power setting register
+
+#define ADXL345_MULTI_BYTE_ENABLE	(0x40) 		// Bit to enable multi-byte operation
+#define ADXL345_READ_OPERATION		(0x80)		// Bit to specifcy read operation
+
+void adxl_init(void);
+void adxl_read(uint8_t address, uint8_t *rxdata);
+void adxl_write(uint8_t, address, uint8_t value);
+
+#endif

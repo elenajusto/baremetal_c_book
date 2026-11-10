@@ -1,6 +1,7 @@
-14:05:44 **** Incremental Build of configuration Debug for project ch10_uart ****
+13:47:11 **** Build of configuration Debug for project ch10_uart ****
 make -j12 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F411CEUx -DSTM32F411xE -c -I../Inc -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Include" -I"C:/Users/elena/Documents/Repos/baremetal_c_book/STM32F411X/ch10_uart/chip_headers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/uart.d" -MT"Src/uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/uart.o"
 arm-none-eabi-gcc -o "ch10_uart.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\elena\Documents\Repos\baremetal_c_book\STM32F411X\ch10_uart\STM32F411CEUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ch10_uart.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: ch10_uart.elf
  
@@ -13,5 +14,5 @@ Finished building: default.size.stdout
 Finished building: ch10_uart.list
  
 
-14:05:45 Build Finished. 0 errors, 0 warnings. (took 497ms)
+13:47:11 Build Finished. 0 errors, 0 warnings. (took 648ms)
 

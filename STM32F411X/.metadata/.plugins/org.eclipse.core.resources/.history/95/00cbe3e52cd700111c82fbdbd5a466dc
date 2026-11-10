@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include "uart.h"
+#include "adc.h"
+
+int sensor_value;
+
+int main(void) {
+	while(1) {
+
+	}
+}

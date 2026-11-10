@@ -1,3 +1,0 @@
-#include "systick.h"
-
-#define CTRL_ENABLE		(1U<<0)
