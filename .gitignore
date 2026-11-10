@@ -1,0 +1,20 @@
+# Eclipse / STM32CubeIDE workspace data (logs, local history, index, window layout)
+.metadata/
+
+# IDE build output folders
+Debug/
+Release/
+
+# Build artifacts (makefile projects build in place)
+*.o
+*.d
+*.elf
+*.map
+*.list
+*.bin
+*.hex
+*.su
+*.cyclo
+
+# Local editor settings at the repo root (machine-specific paths)
+/.vscode/
