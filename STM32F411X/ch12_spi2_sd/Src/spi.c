@@ -118,7 +118,6 @@ uint8_t spi1_transfer(uint8_t tx){
 
 void spi1_transmit(uint8_t *data, uint32_t size){
 	uint32_t i = 0;
-	uint8_t temp;
 
 	while(i < size){
 		// Wait until TXE is set
@@ -139,8 +138,8 @@ void spi1_transmit(uint8_t *data, uint32_t size){
 	}
 
 	// Clear OVR flag
-	temp = SPI1->DR;
-	temp = SPI1->SR;
+	(void)temp = SPI1->DR;
+	(void)temp = SPI1->SR;
 }
 
 void spi1_receive(uint8_t *data, uint32_t size){
