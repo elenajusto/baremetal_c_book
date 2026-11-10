@@ -46,6 +46,9 @@ void adxl_init(void){
 	// config spi
 	spi1_config();
 
+	// set spi1 speed
+	spi1_set_speed(SPI_SPEED_4MHZ);
+
 	// set data format range to +-4g
 	adxl_write (ADXL345_REG_DATA_FORMAT, ADXL345_RANGE_4G);
 
