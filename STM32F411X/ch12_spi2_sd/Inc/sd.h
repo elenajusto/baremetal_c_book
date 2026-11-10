@@ -12,4 +12,8 @@
 #define SD_CMD58	58	// READ_OCR 			- Read OCR
 #define SD_ACMD41	41	// APP_SEND_OP_COND 	- For only SDC. Initiate initialization process (send CMD55 first)
 
+#define SD_READY_TIMEOUT	200000	// max 0xFF reads in sd_wait_ready() (~0.5 s at 4 MHz)
+
+uint8_t sd_wait_ready(void);
+
 #endif
