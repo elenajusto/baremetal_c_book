@@ -99,6 +99,23 @@ void spi1_set_speed(uint8_t br){
 	SPI1->CR1 |=  SPI_CR1_SPE;
 }
 
+// Send one byte and return the byte received at the same time
+uint8_t spi1_transfer(uint8_t tx){
+	// Wait until transmit buffer is empty
+	while( !(SPI1->SR & SPI_SR_TXE) ){
+	}
+
+	// Write byte to data register - starts the 8 clock pulses
+	SPI1->DR = tx;
+
+	// Wait until the received byte has arrived
+	while( !(SPI1->SR & SPI_SR_RXNE) ){
+	}
+
+	// Read received byte (this also clears RXNE)
+	return (uint8_t)SPI1->DR;
+}
+
 void spi1_transmit(uint8_t *data, uint32_t size){
 	uint32_t i = 0;
 	uint8_t temp;
