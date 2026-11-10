@@ -54,9 +54,9 @@ void spi1_config(void){
 	// Enable clock access to SPI1 module
 	RCC->APB2ENR |= RCC_APB2ENR_SPI1EN;
 
-	// Set clock to fPCLK/4 (BR = 001)
+	// Set clock to fPCLK/64 (BR = 101) - slow start for SD init
 	SPI1->CR1 &= ~SPI_CR1_BR_Msk;
-	SPI1->CR1 |=  (SPI_SPEED_4MHZ << SPI_CR1_BR_Pos);
+	SPI1->CR1 |=  (SPI_SPEED_250KHZ << SPI_CR1_BR_Pos);
 
 	// Set CPOL to 1 and CPHA to 1 (mode 3)
 	SPI1->CR1 |=  SPI_CR1_CPHA;
