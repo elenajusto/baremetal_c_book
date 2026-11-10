@@ -150,10 +150,23 @@ void spi1_receive(uint8_t *data, uint32_t size){
 	}
 }
 
-void cs_enable(void){
-	GPIOA->ODR &= ~GPIO_ODR_OD9;
+// ADXL345 chip select - PA9
+void adxl_cs_enable(void){
+	GPIOA->BSRR = GPIO_BSRR_BR9;	// PA9 low - select
 }
 
-void cs_disable(void){
-	GPIOA->ODR |=  GPIO_ODR_OD9;
+void adxl_cs_disable(void){
+	GPIOA->BSRR = GPIO_BSRR_BS9;	// PA9 high - deselect
+}
+
+// SD card chip select - PA10
+void sd_cs_enable(void){
+	GPIOA->BSRR = GPIO_BSRR_BR10;	// PA10 low - select
+}
+
+void sd_cs_disable(void){
+	GPIOA->BSRR = GPIO_BSRR_BS10;	// PA10 high - deselect
+
+	// Extra 8 clocks so the SD card releases MISO
+	spi1_transfer(0xFF);
 }
