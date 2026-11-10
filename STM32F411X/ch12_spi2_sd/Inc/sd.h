@@ -16,4 +16,8 @@
 
 uint8_t sd_wait_ready(void);
 
+#define SD_CMD_RESPONSE_TRIES	10	// max bytes to wait for R1 after a command
+
+uint8_t sd_send_cmd(uint8_t cmd, uint32_t arg, uint8_t crc);
+
 #endif
