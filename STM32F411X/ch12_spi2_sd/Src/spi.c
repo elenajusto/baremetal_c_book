@@ -138,8 +138,8 @@ void spi1_transmit(uint8_t *data, uint32_t size){
 	}
 
 	// Clear OVR flag
-	(void)temp = SPI1->DR;
-	(void)temp = SPI1->SR;
+	(void)SPI1->DR;
+	(void)SPI1->SR;
 }
 
 void spi1_receive(uint8_t *data, uint32_t size){
