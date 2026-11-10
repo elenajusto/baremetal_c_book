@@ -13,7 +13,9 @@ void spi1_set_speed(uint8_t br);
 uint8_t spi1_transfer(uint8_t tx);
 void spi1_transmit(uint8_t *data, uint32_t size);
 void spi1_receive(uint8_t *data, uint32_t size);
-void cs_enable(void);
-void cs_disable(void);
+void adxl_cs_enable(void);
+void adxl_cs_disable(void);
+void sd_cs_enable(void);
+void sd_cs_disable(void);
 
 #endif

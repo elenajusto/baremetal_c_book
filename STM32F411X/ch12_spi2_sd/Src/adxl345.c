@@ -8,7 +8,7 @@ void adxl_read(uint8_t address, uint8_t *rxdata){
 	address |= ADXL345_MULTI_BYTE_ENABLE;
 
 	// pull cs line low - enable target
-	cs_enable();
+	adxl_cs_enable();
 
 	// send address
 	spi1_transmit(&address, 1);
@@ -17,7 +17,7 @@ void adxl_read(uint8_t address, uint8_t *rxdata){
 	spi1_receive(rxdata, 6);
 
 	// pull cs line high - disable target
-	cs_disable();
+	adxl_cs_disable();
 }
 
 void adxl_write(uint8_t address, uint8_t value){
@@ -30,13 +30,13 @@ void adxl_write(uint8_t address, uint8_t value){
 	data[1] = value;
 
 	// pull cs line low - enable target
-	cs_enable();
+	adxl_cs_enable();
 
 	// transmit data and address
 	spi1_transmit(data, 2);
 
 	// pull cs line high - disable target
-	cs_disable();
+	adxl_cs_disable();
 }
 
 void adxl_init(void){
