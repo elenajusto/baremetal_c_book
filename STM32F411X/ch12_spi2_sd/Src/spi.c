@@ -145,15 +145,8 @@ void spi1_transmit(uint8_t *data, uint32_t size){
 
 void spi1_receive(uint8_t *data, uint32_t size){
 	while(size) {
-		// Send dummy data
-		SPI1->DR = 0;
-
-		// Wait for RXNE flag to set
-		while( !(SPI1->SR & SPI_SR_RXNE) ){
-		}
-
-		// Read from data register
-		*data++ = (SPI1->DR);
+		// Send dummy 0xFF and store the byte received at the same time
+		*data++ = spi1_transfer(0xFF);
 		size--;
 	}
 }
